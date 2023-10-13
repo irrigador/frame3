@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nesis - Da Hecatombe à Criação</title>
     <style>
-        bbody, html {
+              body, html {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif; /* Você pode substituir por uma fonte mais moderna se desejar */
     background-color: #121212;
 }
 
@@ -41,7 +41,7 @@ video {
 }
 
 h1 {
-     color: #00FFA3; /* Cor futurista */
+    color: #00FFA3; /* Cor futurista */
     margin-bottom: 20px;
     font-size: 2.5em;
     text-shadow: 2px 2px 4px rgba(0, 255, 163, 0.7);
@@ -52,12 +52,6 @@ p1 {
     margin-bottom: 20px;
     font-size: 1.2em;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
 }
 
 button {
@@ -71,14 +65,27 @@ button {
     transition: transform 0.2s, box-shadow 0.2s;
     margin: 10px;
     box-shadow: 0 0 10px rgba(0, 255, 163, 0.7);
-    width: 120px;
-    text-align: center;
 }
 
 button:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0, 255, 163, 0.9);
 }
+
+     .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.0);
+            opacity: 0; /* Inicialmente invisível */
+        }
+
     </style>
 </head>
 <body>
@@ -87,15 +94,13 @@ button:hover {
             <source src="video8.mp4" type="video/mp4">
             Seu navegador não suporta a tag de vídeo.
         </video>
-        
+	
         <div class="overlay" id="endOverlay">
-            <h1>Quem salvara a raça humana da destruição eminente?</h1>
-            <div class="button-container">
-            <button id="Btn1" class="btn">Godzila</button>
-            <button id="Btn2" class="btn">Titã Colossal</button>
-            <button id="Btn3" class="btn">Robô Gigante</button>
+	<h1>Quem salvara a raça humana da destruição eminente?</h1>
+            <button id="Btn1">Godzila</button>
+	    <button id="Btn2">Titã Colossal</button>
+	    <button id="Btn3">Robô Gigante</button>
         </div>
-            </div>
     </div>
     <script>
         const videoElement = document.getElementById('videoElement');
@@ -111,19 +116,19 @@ button:hover {
             endOverlay.style.opacity = "1";
         });
 
-        document.getElementById('Btn1').addEventListener('click', function() {
+ document.getElementById('Btn1').addEventListener('click', function() {
             window.location.href = 'https://framet.vercel.app/';
         });
-        document.getElementById('Btn2').addEventListener('click', function() {
+document.getElementById('Btn2').addEventListener('click', function() {
             window.location.href = 'https://frame4.vercel.app/';
         });
-        document.getElementById('Btn3').addEventListener('click', function() {
+document.getElementById('Btn3').addEventListener('click', function() {
             window.location.href = 'https://framet2.vercel.app/';
         });
 
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
     </script>
 </body>
 </html>
