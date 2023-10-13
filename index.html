@@ -5,80 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nesis - Da Hecatombe à Criação</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            font-family: 'Arial', sans-serif;
-            background-color: #121212;
-        }
+        bbody, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+}
 
-        .video-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 
-        video {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
 
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.0);
-            flex-wrap: wrap;
-            opacity: 0;
-        }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+}
 
-        h1 {
-            color: #00FFA3;
-            margin-bottom: 20px;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0, 255, 163, 0.7);
-        }
+h1 {
+    color: #00FFA3;
+    margin-bottom: 20px;
+    font-size: 5.5em;
+    text-shadow: 2px 2px 4px rgba(0, 255, 163, 0.7);
+}
 
-        p1 {
-            color: #FFFFFF;
-            margin-bottom: 20px;
-            font-size: 1.2em;
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
-        }
+p1 {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+}
 
-        .btn {
-            width: 150px;
-            text-align: center;
-        }
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 
-        button {
-            padding: 10px 20px;
-            font-size: 20px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            background-color: #00FFA3;
-            color: #121212;
-            transition: transform 0.2s, box-shadow 0.2s;
-            margin: 10px 15px;
-            box-shadow: 0 0 10px rgba(0, 255, 163, 0.7);
-        }
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #00FFA3;
+    color: #121212;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 163, 0.7);
+    width: 120px;
+    text-align: center;
+}
 
-        button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(0, 255, 163, 0.9);
-        }
-
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 163, 0.9);
+}
     </style>
 </head>
 <body>
@@ -90,10 +90,12 @@
         
         <div class="overlay" id="endOverlay">
             <h1>Quem salvara a raça humana da destruição eminente?</h1>
+            <div class="button-container">
             <button id="Btn1" class="btn">Godzila</button>
             <button id="Btn2" class="btn">Titã Colossal</button>
             <button id="Btn3" class="btn">Robô Gigante</button>
         </div>
+            </div>
     </div>
     <script>
         const videoElement = document.getElementById('videoElement');
